@@ -1,4 +1,46 @@
+local models = {
+  {
+    name = "gemini2.0-flash",
+    model = "google/gemini-2.0-flash-001",
+    disable_tools = false,
+  },
+  {
+    name = "gpt-4o-mini",
+    model = "openai/gpt-4o-mini",
+    disable_tools = false,
+  },
+  {
+    name = "gemini-2.0-pro-exp-free",
+    model = "google/gemini-2.0-pro-exp-02-05:free",
+    disable_tools = false,
+  },
+  {
+    name = "deepseek-r1-zero-free",
+    model = "deepseek/deepseek-r1-zero:free",
+    disable_tools = true,
+  },
+  {
+    name = "claude-3.7-sonnet-thinking-3dollars",
+    model = "anthropic/claude-3.7-sonnet:thinking",
+    disable_tools = true,
+  },
+}
+
+local vendors = {}
+
+for _, model in ipairs(models) do
+  vendors[model.name] = {
+    __inherited_from = "openai",
+    endpoint = "https://openrouter.ai/api/v1",
+    model = model.model,
+    api_key_name = "OPENROUTER_API_KEY",
+    disable_tools = model.disable_tools,
+    -- temperature = 0,
+  }
+end
+
 return {
+
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
@@ -6,15 +48,10 @@ return {
     opts = {
       -- add any opts here
       -- for example
-      provider = "openai",
-      openai = {
-        endpoint = "https://openrouter.ai/api/v1",
-        model = "google/gemini-2.0-flash-001", -- your desired model (or use gpt-4o, etc.)
-        timeout = 30000, -- timeout in milliseconds
-        temperature = 0, -- adjust if needed
-        max_tokens = 4096,
-        -- reasoning_effort = "high" -- only supported for reasoning models (o1, etc.)
-      },
+      provider = "gemini2.0-flash",
+      -- Query more openrouter models with tools capability
+      -- https://openrouter.ai/models?fmt=table&supported_parameters=tools
+      vendors = vendors,
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
