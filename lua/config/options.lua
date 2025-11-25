@@ -21,3 +21,6 @@ vim.filetype.add({
     -- html = "jinja",  -- Optional for HTML files
   },
 })
+
+-- Native inline completions don't support being shown as regular completions
+vim.g.ai_cmp = true
