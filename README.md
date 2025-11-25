@@ -9,15 +9,30 @@ starter template for [LazyVim](https://github.com/LazyVim/LazyVim), customized
 a little bit to fit my needs.
 
 What are my needs? Not much really... LazyVim comes pretty well featured out of
-the box, I only added some minor changes
-and a plugin for AI [Avante.nvim](https://github.com/yetone/avante.nvim).
+the box, but I've added some customizations and extras to fit my workflow:
+
+### LazyVim Extras
+
+- AI: GitHub Copilot
+- Coding: mini.surround
+- Editor: Snacks Explorer & Picker
+- Debugging: DAP Core
+- Languages: Ansible, Helm, JSON, Markdown, Rust, TeX, YAML
+- Util: mini-hipatterns
+
+### Custom Plugins
+
+- [OpenCode](https://github.com/NickvanDyke/opencode.nvim) - AI coding assistant integration
+- [Undotree](https://github.com/jiaoshijie/undotree) - Visual undo tree
+- Snacks picker - Enhanced with custom keybindings for file operations
+
 My intention is to use LazyVim with the less modifications possible.
 
 Anyway, I fully recommend referring to the official [documentation](https://lazyvim.github.io/installation)
 to get started and familiar with LazyVim.
 
 If you experiment any errors, I recommend you run the command `checkhealth` and
-find for any `ERROR` reported and fix them.
+find for any `ERROR` reported and fix it.
 
 Many dependencies will be missed, and depending on your
 operating system, those dependencies will be easier or harder to install or will
