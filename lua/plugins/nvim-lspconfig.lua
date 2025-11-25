@@ -28,13 +28,13 @@ return {
 
       setup = {
         yamlls = function()
-          LazyVim.lsp.on_attach(function(client, buffer)
+          require("snacks").util.lsp.on({ name = "yamlls" }, function(buffer, client)
             if vim.bo[buffer].filetype == "helm" then
               vim.schedule(function()
                 vim.cmd("LspStop ++force yamlls")
               end)
             end
-          end, "yamlls")
+          end)
         end,
       },
     },
