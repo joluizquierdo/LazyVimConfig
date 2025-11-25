@@ -1,6 +1,5 @@
 return {
   "folke/snacks.nvim",
-  ---@type snacks.Config
   opts = {
     picker = {
       sources = {
@@ -10,6 +9,9 @@ return {
               keys = {
                 -- Use Y in explorer to copy the *absolute* path
                 ["Y"] = "copy_full_path",
+                -- Custom keybindings for toggling hidden files
+                -- in the explorer picker window
+                ["<a-.>"] = "toggle_hidden",
               },
             },
           },
@@ -19,6 +21,15 @@ return {
               vim.fn.setreg("+", path) -- or "*" if you prefer
               vim.notify("Copied: " .. path)
             end,
+          },
+        },
+      },
+      win = {
+        input = {
+          -- Custom keybindings for toggling hidden files
+          -- for rest of the picker windows
+          keys = {
+            ["<a-.>"] = { "toggle_hidden", mode = "n" },
           },
         },
       },
