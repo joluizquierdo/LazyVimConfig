@@ -25,6 +25,7 @@ the box, but I've added some customizations and extras to fit my workflow:
 - [OpenCode](https://github.com/NickvanDyke/opencode.nvim) - AI coding assistant integration
 - [Undotree](https://github.com/jiaoshijie/undotree) - Visual undo tree
 - Snacks picker - Enhanced with custom keybindings for file operations
+- Copilot - Configured to work in all filetypes (including YAML, markdown, gitcommit)
 
 My intention is to use LazyVim with the less modifications possible.
 
