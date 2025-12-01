@@ -4,6 +4,7 @@ return {
     picker = {
       sources = {
         explorer = {
+          hidden = true,
           win = {
             list = {
               keys = {
@@ -22,6 +23,12 @@ return {
               vim.notify("Copied: " .. path)
             end,
           },
+        },
+        grep = {
+          hidden = true,
+        },
+        todo_comments = {
+          hidden = true,
         },
       },
       win = {
