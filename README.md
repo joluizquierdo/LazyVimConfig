@@ -27,6 +27,11 @@ the box, but I've added some customizations and extras to fit my workflow:
 - Snacks picker - Enhanced with custom keybindings for file operations
 - Copilot - Configured to work in all filetypes (including YAML, markdown, gitcommit)
 
+### Disabled Plugins
+
+- Neo-tree - Using Snacks Explorer instead
+- Bufferline - Buffer tabs disabled for cleaner UI
+
 My intention is to use LazyVim with the less modifications possible.
 
 Anyway, I fully recommend referring to the official [documentation](https://lazyvim.github.io/installation)
