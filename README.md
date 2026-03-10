@@ -1,5 +1,6 @@
-I no longer use LazyVim I switched to a custom minimal configuration
-that you can check [here](https://github.com/joluizquierdo/neovim).
+> [!WARNING]
+> I no longer use LazyVim I switched to a custom minimal configuration
+> that you can check [here](https://github.com/joluizquierdo/neovim).
 
 # 💤 LazyVim
 
