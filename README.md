@@ -1,3 +1,6 @@
+I no longer use LazyVim I switched to a custom minimal configuration
+that you can check [here](https://github.com/joluizquierdo/neovim).
+
 # 💤 LazyVim
 
 LazyVim is a `Neovim` distribution, which will configure Neovim to run on
